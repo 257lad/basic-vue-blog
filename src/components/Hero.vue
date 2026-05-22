@@ -1,8 +1,7 @@
 <template>
   <div class="container">
-      <Navbar />
-      
-</div>
+    <Navbar />
+  </div>
 
 </template>
 
@@ -18,9 +17,9 @@ export default {
 
 <style scoped>
 .container {
-    background: #2d68f6;
-    height: 65vh;
+  background: #2d68f6;
+  height: 65vh;
 
-    padding: 10px 60px;
+  padding: 10px 60px;
 }
 </style>

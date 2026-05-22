@@ -5,7 +5,6 @@
         </div>
         <div class="menus">
             <div>Home</div>
-            
             <div>
                 <span>News</span>
                 <i class="fa-solid fa-angle-down"></i>
@@ -15,8 +14,7 @@
                     <li>Last week</li>
                 </ul>
             </div>
-
-            <div>
+            <!-- <div>
                 <span>About us</span>
                 <i class="fa-solid fa-angle-down"></i>
                 <ul class="dropdown">
@@ -24,7 +22,7 @@
                     <li>Yesterday</li>
                     <li>Last week</li>
                 </ul>
-            </div>
+            </div> -->
 
             <button class="get_started">Get started</button>
         </div>
@@ -64,11 +62,21 @@ div.menus > div ul.dropdown {
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 10px;
     list-style: none;
     margin: 0;
     background: white;
-    /* color: #2d68f6 !important; */
+    /* border-radius: 6px; */
+     
+    li{
+        cursor: pointer;
+        color: #0D328A !important;
+        padding:6px 10px;
+
+        &:hover {
+            color: white !important;
+            background-color: #0D328A;
+        }
+    }
 }
 
 div.menus > div:hover ul.dropdown {
@@ -85,6 +93,7 @@ div.menus > div:hover i.fa-solid {
 }
 
 button.get_started {
+    cursor: pointer;
     display: block;
     padding: 6px 12px;
     border-radius: 10px;

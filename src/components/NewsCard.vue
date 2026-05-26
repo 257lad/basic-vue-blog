@@ -11,11 +11,42 @@
                 {{ topic }}
             </span>
         </div>
-    </div>
+        <div class="link-button">
+            <button @click="$router.push(`/read/${news_item.id}`)" >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Read article
+            </button>
+        </div>
+    </div>  
 </template>
 <script>
 export default {
     props: ['news_item'],
 }
 </script>
-<style></style>
+<style scoped>
+    .news-card {
+        position: relative;
+
+        &:hover .link-button{
+            display: flex;
+        }
+
+        .link-button{
+            display: none;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 255, 0.4);
+
+            button {
+                cursor: pointer;
+                padding: 10px 15px;
+                border-radius: 10px;
+                border: 1px solid;
+            }
+        }
+    }
+</style>

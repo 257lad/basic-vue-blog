@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div :class="`container ${showNavbarOnly ? 'nav-only' : ''}`" >
     <Navbar />
   </div>
 
@@ -11,6 +11,14 @@ import Navbar from './Navbar.vue';
 export default {
   components: {
     Navbar
+  },
+  computed: {
+    showNavbarOnly() {
+      if(this.$route.name != 'Homepage') {
+        return true
+      }
+      return false
+    }
   }
 }
 </script>
@@ -19,7 +27,9 @@ export default {
 .container {
   background: #2d68f6;
   height: 65vh;
+}
 
-  padding: 10px 60px;
+.nav-only {
+  height: fit-content;
 }
 </style>

@@ -65,6 +65,7 @@ div.menus > div ul.dropdown {
     list-style: none;
     margin: 0;
     background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     /* border-radius: 6px; */
      
     li{
